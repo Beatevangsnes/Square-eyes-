@@ -1,0 +1,228 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  padding: 60px;
+}
+
+.checkout {
+  grid-column: 1/4;
+  grid-row: 1;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.img-card img {
+  max-width: 240px;
+  margin-bottom: 10px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+}
+
+.img-card {
+  grid-column: 1/2;
+  grid-row: 2;
+  max-width: 240px;
+  text-align: center;
+}
+
+.img-card p {
+  margin-bottom: 10px;
+}
+
+.contact-info-card {
+  grid-column: 2/4;
+  grid-row: 2;
+}
+
+.contact-info-card input {
+  width: 300px;
+  margin-top: 20px;
+}
+
+.card-info {
+  grid-column: 2/4;
+  grid-row: 2;
+  margin-top: 240px;
+  justify-content: center;
+  border: 1px solid #ffcb9a;
+  width: 400px;
+  text-align: center;
+}
+
+.card-info .card-number input {
+  width: 320px;
+  margin-top: 20px;
+}
+
+.card-info input {
+  width: 150px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.buy-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.buy-card .btn {
+  position: relative;
+  width: 160px;
+  height: 46px;
+  margin: 10px;
+}
+
+.buy-card .btn a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  z-index: 1;
+  letter-spacing: 1px;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(15px);
+}
+
+.buy-card .btn:hover a {
+  letter-spacing: 3px;
+  color: #24252a;
+}
+
+.buy-card .btn a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255,255,255,0.15),transparent);
+  transform: skewX(45deg) translateX(0);
+  transition: 0.3s;
+}
+
+.buy-card .btn:hover a::before {
+  transform: skewX(45deg) translateX(200%);
+}
+
+.buy-card .btn::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  width: 100px;
+  height: 10px;
+  background: #18b7be;
+  transition: 0.3s;
+}
+
+.buy-card .btn:hover::before {
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.3s;
+}
+
+.buy-card .btn::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5px;
+  width: 100px;
+  height: 10px;
+  background: #18b7be;
+  transition: 0.3s;
+}
+
+.buy-card .btn:hover::after {
+  top: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.3s;
+}
+
+.buy-card .btn::before,
+.buy-card .btn::after {
+  background: #ffcb9a;
+  box-shadow: 0 0 5px #ffcb9a,
+  0 0 15px #ffcb9a,
+  0 0 30px #ffcb9a,
+  0 0 60px #ffcb9a;
+}
+
+
+
+@media (max-width: 1030px ) {
+
+ main {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+ }
+
+ .contact-info-card {
+  margin-top: 30px;
+ }
+
+ .card-info {
+  margin-top: 30px;
+ }
+
+ .buy-card {
+  margin-bottom: 20px;
+ }
+}
+
+@media (max-width: 600px ) {
+
+
+  .contact-info-card {
+    margin-left: 0px;
+  }
+
+  .contact-info input {
+    width: 200px;
+  }
+}
+
+
+@media (max-width: 500px ) {
+.card-info {
+  max-width: 250px;
+  padding: 0px;
+}
+.contact-info-card {
+  max-width: 250px;
+}
+
+.card-number input {
+  max-width: 200px;
+}
+
+
+.contact-info {
+  max-width: 250px;
+  margin: 0px;
+  align-items: center;
+}
+
+
+}
