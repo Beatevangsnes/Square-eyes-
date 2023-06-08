@@ -1,6 +1,6 @@
 # Square Eyes
 
-![image](https://github.com/Beatevangsnes/Community-Science-Museum/blob/master/images/communitysciencemuseum.png?raw=true)
+![image](https://github.com/Beatevangsnes/Portfolio/blob/master/images/squareeyes.png?raw=true)
 
 ## Description
 
